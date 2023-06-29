@@ -1,5 +1,9 @@
+![Banner](images/banner.jpg)
+
 # MullvadPy
 
-MullvadPy is a Python library that provides an easy-to-use interface for interacting with the Mullvad VPN service programmatically. It allows you to automate various tasks related to managing your Mullvad VPN connection.
+MullvadPY is a python package used to connect/reconnect/disconnect using the mullvad VPN CLI Interface. The interface comes pre-installed with the download of the gui interface of the VPN client. Easy to implement in your code with simple syntax.
 
-![Banner](images/banner.jpg)
+## Features
+• Updated Relay List
+• Randomized Location list (US Based)
