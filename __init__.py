@@ -1,4 +1,4 @@
-import subprocess
+import subprocess, random
 
 """
 Python/subprocesses based Mullvad VPN CLI Package
@@ -23,4 +23,24 @@ def refresh_connections_list():
 
 
 avalible_connections: list = refresh_connections_list()
+
+
+def refresh_connection():
+    """ Use CLI to connect to vpn """
+    try:
+        output = subprocess.check_output(f"mullvad relay set hostname {random.choice(avalible_connections)}", shell=True)
+    except Exception as e:
+        print(e)
+    try:
+        output = subprocess.check_output("mullvad connect", shell=True)
+    except Exception as e:
+        print(e)
+
+
+def disconnect():
+    """ Use CLI to disconnect to vpn """
+    try:
+        output = subprocess.check_output("mullvad disconnect", shell=True)
+    except Exception as e:
+        print(e)
 
